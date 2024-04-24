@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil de l'utilisateur</title>
+    <link rel="stylesheet" href="userSettings.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <img src="../img/defaultpfp.jpg" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="contenu">
+            <h2>Paramètres</h2>
+            <form id="profileForm">
+                <label for="username">Nom d'utilisateur:</label><br>
+                <input type="text" id="username" name="username" value="userTest882"><br>
+                
+                <label for="bio">Biographie:</label><br>
+                <textarea id="bio" name="bio">Salut je suis UserTest882 j'aime tout le monde yes</textarea><br>
+                
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" value="exemple@gmail.com"><br>
+
+                <label for="currentPassword">Mot de passe actuel (pour confirmation):</label><br>
+                <input type="password" id="currentPassword" name="currentPassword"><br>
+                
+                <label for="newPassword">Nouveau mot de passe (laisser vide si inchangé):</label><br>
+                <input type="password" id="newPassword" name="newPassword"><br>
+                
+                <label for="profilePicture">Photo de profil:</label><br>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><br>
+                
+                <input type="submit" value="Sauvegarder les modifications" id="saveChangesButton">
+            </form>
+    </div>
+    <script src="userSettings.js"></script>
+</body>
+</html>

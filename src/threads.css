@@ -1,0 +1,211 @@
+/* CSS Styles de threads */
+.forum input[type="text"], .forum textarea {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+.forum button {
+    padding: 10px 15px;
+    background-color: #407262;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forum button:hover {
+    background-color: #325b47;
+}
+
+.thread-item {
+    background-color: #77918a;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.thread-title {
+    font-size: 16px;
+    color: #407262;
+}
+
+.thread-content {
+    font-size: 14px;
+    color: #333;
+}
+
+.profile-picture {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* CSS Styles de index.css */
+
+body {
+    background: rgb(39, 58, 56);;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #407262;
+}
+
+.menu-profil {
+    position: relative; 
+    
+    padding-right:150px;
+}
+
+.contenu {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10%;
+}
+
+.colonne-gauche {
+    flex: 3; /* 30% de l'espace */
+    margin-right: 20px; /* Pour ajouter un peu d'espace entre les colonnes */
+    background-color:rgba(0, 0, 0, 0.205);
+    padding:1%;
+    border-radius:10px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.163);
+}
+
+.colonne-droite {
+    background-color:rgba(153, 152, 152, 0.041);
+    padding: 2%;
+    border-radius: 10px;
+    flex: 7; /* 70% de l'espace disponible*/
+}
+
+.photo-profil {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.niveaux-completes ul, .meilleurs-scores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.niveaux-completes li, .meilleurs-scores li {
+    background-color: #9b5353;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding-left:150px;
+    flex-grow: 1;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000000b3; 
+    padding: 10px;
+    margin: 0 5px; 
+}
+
+.navigation a:hover {
+    background-color: #325b47; 
+    color:rgb(189, 247, 197);
+    border-radius: 5px; 
+}
+
+
+.icone-profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    right: 180px;
+    top: 20px; 
+    background-color: #1c2521;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 9px;
+}
+
+.menu-options a {
+    color: rgb(247, 247, 247);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-options a:hover {
+    background-color: #a2a2a21f;
+}
+
+.menu-profil:hover .menu-options {
+    display: block;
+}
+
+.username {
+    color:rgb(91, 175, 143);
+}
+
+
+.profil {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#bde1d0
+}
+
+.photo-profil {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+.info-utilisateur {
+    background-color:#0000004b;
+    border-radius: 10px;   
+    padding:2%;
+}
+.bio {
+    color: #91a88f;
+}
+
+h2 {
+    color:rgb(161, 215, 193);
+}
+
+.niveaux-completes li, .meilleurs-scores li {
+    margin-bottom: 10px;
+    background-color:#0000004b;
+    color: #91a88f;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.like-button {
+    padding: 5px 10px;
+    margin-top: 5px;
+    background-color: #4A766E;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.like-button:hover {
+    background-color: #3E5F5A;
+}
