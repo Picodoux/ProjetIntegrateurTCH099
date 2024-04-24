@@ -47,6 +47,10 @@ body {
 .background-gif {
     background: url('../img/example_background.gif') no-repeat center center fixed;
     background-size: cover;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 50px;
 }
 
 .title-and-first-paragraph {
@@ -59,8 +63,17 @@ body {
 
 .lower-content {
     text-align: center;
-    padding: 50px 0;+
+    padding: 50px 0;
+    text-align: center;
+    padding: 50px 15%; /* Ajoutez un pourcentage de padding sur les côtés */
+    box-sizing: border-box;
 }
+
+.login {
+    background: #84c8a670;
+    border-radius: 10px;
+}
+
 
 h1 {
     color: #86a58c;
@@ -81,7 +94,7 @@ p {
     font-size: 1.5em;
     text-decoration: none;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .download-button:hover {

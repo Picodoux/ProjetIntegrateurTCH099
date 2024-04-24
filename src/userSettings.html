@@ -8,7 +8,7 @@
 <body>
     <div class="header">
         <nav class="navigation">
-            <a href="index.html">Accueil</a>
+            <a href="home.html">Accueil</a>
             <a href="levels.html">Niveaux</a>
             <a href="rankings.html">Classements</a>
             <a href="threads.html">Forum</a>
@@ -25,28 +25,21 @@
     </div>
     
     <div class="contenu">
-            <h2>Paramètres</h2>
-            <form id="profileForm">
-                <label for="username">Nom d'utilisateur:</label><br>
-                <input type="text" id="username" name="username" value="userTest882"><br>
-                
-                <label for="bio">Biographie:</label><br>
-                <textarea id="bio" name="bio">Salut je suis UserTest882 j'aime tout le monde yes</textarea><br>
-                
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" value="exemple@gmail.com"><br>
+        <h2>Paramètres</h2>
 
-                <label for="currentPassword">Mot de passe actuel (pour confirmation):</label><br>
-                <input type="password" id="currentPassword" name="currentPassword"><br>
-                
-                <label for="newPassword">Nouveau mot de passe (laisser vide si inchangé):</label><br>
-                <input type="password" id="newPassword" name="newPassword"><br>
-                
-                <label for="profilePicture">Photo de profil:</label><br>
-                <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><br>
-                
-                <input type="submit" value="Sauvegarder les modifications" id="saveChangesButton">
-            </form>
+        <form id="bioForm">
+            <label for="bio">Biographie:</label><br>
+            <textarea id="bio" name="bio">Salut je suis UserTest882 j'aime tout le monde yes</textarea><br>
+            <button type="submit" class="save-button">Sauvegarder Bio</button>
+        </form>
+
+        <form id="profilePictureForm">
+            <label for="profilePicture">Photo de profil:</label><br>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><br>
+            <button type="submit" class="save-button">Sauvegarder Photo</button>
+        </form>
+
+        <a href="sendPassword.html" class="password-change-link">Changer le mot de passe ici</a>
     </div>
     <script src="userSettings.js"></script>
 </body>
