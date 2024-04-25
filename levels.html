@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des Niveaux</title>
+    <link rel="stylesheet" href="levels.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="home.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <button id="loginButton" style="display: none;">Connexion</button>
+            <img src="../img/joobi.png" style="display: none;" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+
+    <div class="contenu levels">
+        <div class="upload-level-form">
+            <h2>Uploader un nouveau niveau</h2>
+            <form action="/upload_level" method="post" enctype="multipart/form-data"> 
+                <label for="levelName">Nom du niveau:</label>
+                <input type="text" id="levelName" name="name" required> 
+        
+                <label for="levelFile">Fichier du niveau:</label>
+                <input type="file" id="levelFile" name="file" accept=".club" required> 
+        
+                <label for="levelDifficulty">Difficulté:</label>
+                <select id="levelDifficulty" name="difficulty" required> 
+                    <option value="easy">Facile</option>
+                    <option value="medium">Moyen</option>
+                    <option value="hard">Difficile</option>
+                    <option value="lunatic">Lunatique</option>
+                </select>
+        
+                <button type="submit" class="upload-button">Uploader</button>
+            </form>
+        </div>
+        
+
+        <h2>Liste des Niveaux</h2>
+        <div id="levelsList">
+            <div class="level-item">
+                <div class="level-header">
+                    <img src="../img/nerd.png" alt="Niveau 1" class="level-icon">
+                    <h3 class="level-title">Super Level</h3>
+                    <span class="level-difficulty">Lunatique</span>
+                </div>
+                <p class="level-description">Description du niveau 1</p>
+                <a class="level-action-button" href="level_info.html">Détails & Téléchargement</a>
+            </div>
+            <div class="level-item">
+                <div class="level-header">
+                    <img src="../img/luffy.png" alt="Niveau 2" class="level-icon">
+                    <h3 class="level-title">Niveau 2</h3>
+                    <span class="level-difficulty">Extrême</span>
+                </div>
+                <p class="level-description">Description du niveau 2</p>
+                <a class="level-action-button" href="level_info.html">Détails & Téléchargement</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="levels.js"></script>
+</body>
+</html>

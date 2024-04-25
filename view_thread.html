@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Forum de Discussion</title>
+    <link rel="stylesheet" href="view_thread.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="home.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <button id="loginButton" style="display: none;">Connexion</button>
+            <img src="../img/joobi.png" style="display: none;" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="contenu forum">
+        <div class="colonne-gauche">
+            <form id="commentForm">
+                <h2>Poster un commentaire</h2>
+                <textarea id="commentContent" rows="3" placeholder="Entrez votre commentaire..." required></textarea>
+                <button type="submit">Poster</button>
+            </form>
+        </div>
+        
+        <div class="colonne-droite">
+            <h2>Threads</h2>
+            <div id="commentsList">
+
+            </div>
+            
+        </div>
+    </div>
+    <script src="view_thread.js"></script>
+</body>
+</html>

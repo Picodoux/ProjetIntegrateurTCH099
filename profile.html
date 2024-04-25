@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil de l'utilisateur</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <img src="../img/joobi.png" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="contenu">
+        <div class="colonne-gauche">
+            <div class="profil">
+                <img src="../img/joobi.png" alt="Photo de profil" class="photo-profil" id="profilePicture">
+                
+                <!-- La nom de l'utilisateur -->
+                <h1 class="username" id="username">Chargement...</h1>
+                <!-- La bio de l'utilisateur -->
+                <p class="bio" id="bio">Chargement...</p>
+                <div class="info-utilisateur">
+                    <p class="email" id="email">Email : Chargement...</p>
+                    <p id="joinDate">Date d'inscription : Chargement...</p>
+                    <p id="playedTime">Temps joué : Chargement...</p>
+                </div>
+            </div>
+        </div>
+        <div class="colonne-droite">
+            <div class="niveaux-completes">
+                <h2>Niveaux Complétés</h2>
+                <ul id="completedLevels">
+                    <li> 
+                        <p class="levelname">Super Level</p> 
+                        Score : 399,182
+                        <p>Créateur : Scart,  Difficulté : Lunatique </p>
+                    </li>
+                    <li>
+                        <p class="levelname">Hard232</p> 
+                        Score : 28,201
+                        <p>Créateur : ClubDesAmis,  Difficulté : Lunatique </p>
+                    </li>
+                    <li>
+                        <p class="levelname">DemoLevel</p> 
+                        Score : 2,929,834
+                        <p>Créateur : Pico,  Difficulté : Lunatique </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="meilleurs-scores">
+                <h2>Meilleurs scores</h2>
+                <ul id="topScores">
+                    <li>
+                        <p class="levelname">DemoLevel</p> 
+                        Score : 2,929,834
+                        <p>Créateur : Pico,  Difficulté : Lunatique </p>
+                    </li>
+                    <li> 
+                        <p class="levelname">Super Level</p> 
+                        Score : 399,182
+                        <p>Créateur : Scart,  Difficulté : Lunatique </p>
+                    </li>
+                    <li>
+                        <p class="levelname">Hard232</p> 
+                        Score : 28,201
+                        <p>Créateur : ClubDesAmis,  Difficulté : Lunatique </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

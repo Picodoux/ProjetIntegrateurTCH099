@@ -1,0 +1,116 @@
+body {
+    background: rgb(39, 58, 56);
+    font-family: Arial, sans-serif;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    right: 180px;
+    top: 20px; 
+    background-color: #1c2521;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 9px;
+}
+
+.menu-options a {
+    color: rgb(247, 247, 247);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-options a:hover {
+    background-color: #a2a2a21f;
+}
+
+.menu-profil:hover .menu-options {
+    display: block;
+}
+
+.globalContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #1f2e2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    text-align: center;
+    transform: translateY(-25%);
+
+}
+
+.form-container h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.145);
+    padding: 10px;
+    color: #95c6a7;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-group input {
+    width: calc(100% - 10px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: none;
+}
+
+.toggle-password {
+    position: relative;
+}
+
+.toggle-password i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ff4040;
+}
+
+a {
+    padding: 5px 10px;
+    background-color: #517e71;
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+a:hover {
+    background-color: rgb(135, 164, 157);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du niveau</title>
+    <link rel="stylesheet" href="level_info.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <nav class="navigation">
+            <a href="home.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <button id="loginButton" style="display: none;">Connexion</button>
+            <img src="../img/joobi.png" style="display: none;" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+
+
+    <main>
+
+        <section class="level-details">
+            <h1>Informations sur le niveau</h1>
+            <p><strong>Auteur:</strong> ClubDesAmis</p>
+            <p><strong>Difficulté:</strong> Lunatique</p>
+            <p><strong>Longueur:</strong> Court</p>
+            <button onclick="location.href='URL_DU_NIVEAU_ICI'" class="download-button">Télécharger le niveau</button>
+        </section>
+
+        <section class="comments-section">
+            <h2>Laissez un commentaire!</h2>
+            <form id="comment-form" class="comment-form">
+                <input type="text" id="comment-title" class="input-field" placeholder="Titre du commentaire" required>
+                <textarea id="comment-text" class="textarea-field" placeholder="Votre commentaire" required></textarea>
+                <button type="submit" class="submit-button">Publier</button>
+            </form>
+            <h5>Vous devez être connecté pour laisser un commentaire!</h5>
+            <div class="comment">
+                <img src="/img/drip goku.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="comment-body">
+                    <div class="comment-content">
+                        <h3>Goku</h3>
+                        <h4>SAIYAN FROM EARTH</h4>
+                        <p>Hey! It's me, Goku!</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="like-btn">♥ 0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="/img/vegeta.jpg" alt="Profile Picture" class="profile-pic">
+                <div class="comment-body">
+                    <div class="comment-content">
+                        <h3>Vegeta<span class="admin-symbol">★</span></h3>
+                        <h4>HIS POWER LEVEL</h4>
+                        <p>It's over 9000!!!!</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="like-btn">♥ 0</span>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment">
+                <img src="/images/broly.png" alt="Profile Picture" class="profile-pic">
+                <div class="comment-body">
+                    <div class="comment-content">
+                        <h3>Broly</h3>
+                        <h4>KAKAROOTTO</h4>
+                        <p>KAKARRROOOOOOOOTTT!!!!</p>
+                    </div>
+                    <div class="comment-actions">
+                        <span class="like-btn">♥ 0</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script src="level_info.js"></script>
+</body>
+
+</html>

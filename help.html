@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Aide - Clubscript Guide</title>
+    <link rel="stylesheet" href="help.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+
+        <div class="menu-profil">
+            <img src="../img/joobi.png" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="index.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="help-container">
+        <h1>Guide d'utilisation du langage Clubscript</h1>
+        
+        <section>
+            <h2>1.0 Les Balises de fichier</h2>
+            <article>
+                <h3>1.1 Balise &lt;META&gt; ... &lt;/META&gt;</h3>
+                <h4>La balise &lt;META&gt; est placée au tout début du fichier de script et encapsule les métadonnées du niveau.</h4>
+                <p>	Name: la donnée Name identifie le nom du niveau qui sera affiché sur le site et dans le menu du jeu</p>
+                <p> Difficulty: Niveau de difficulté affiché dans le menu, pouvant être "Easy", "Medium", "Hard" ou "Lunatic"</p>
+                <p>Creator: identifiant de l'utilisateur qui a créé le niveau, utilisez le nom associé à votre compte</p>
+                <p>LifeCount: le nombre de fois que le joueur peut se faire toucher par un projectile avant de perdre définitivement la partie.</p>
+            </article>
+            <article>
+                <h3>1.2 Balise &lt;SCRIPT&gt; ... &lt;/SCRIPT&gt;</h3>
+                <p>La balise &lt;SCRIPT&gt; suit la balise &lt;META&gt; et contient toutes les instructions et sous-balises du niveau.</p>
+            </article>
+        </section>
+        
+        <section>
+            <h2>2.0 Les balises de contrôle</h2>
+            <article>
+                <h3>2.1 Balise &lt;LOOP&gt; n ... &lt;/LOOP&gt;</h3>
+                <p>La balise &lt;SCRIPT&gt; itère n fois à travers les instructions qu'elle contient. Vous pouvez la voir comme une boucle for, sauf que la variable d'itération n'est pas manipulable</p>
+            </article>
+            <article>
+                <h3>2.2 Balise &lt;PARALLEL&gt; ... &lt;/PARALLEL&gt;</h3>
+                <p>La balise &lt;PARALLEL&gt; exécute toutes les instructions qu'elle contient en parallèle. Il est donc possible, par exemple, d'instancier des projectiles en même temps que l'ennemi se déplace.</p>
+            </article>
+            <article>
+                <h3>2.3 Balise &lt;SEQUENCE&gt; ... &lt;/SEQUENCE&gt;</h3>
+                <p>La balise &lt;SEQUENCE&gt; exécute toutes les instructions qu'elle contient séquentiellement. Elle peut, au premier abord, ne pas paraître très utile, mais il est utile de pouvoir exécuter certaines instructions séquentiellement à l'intérieur d'une balise &lt;PARALELL&gt;</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>3.0 Les instructions d'instanciation de projectiles</h2>
+            <article>
+                <h3>3.1 MakeCircle</h3>
+                <h4>L'instruction MakeCircle permet d'instancier des projectiles en cercle selon plusieurs paramètres. Les paramètres, dans l'ordre, sont:</h4>
+                <p>	<b>positionX(int):</b> position d'origine des projectiles sur l'axe des X. La valeur entière peut être substituée par la chaîne de charactères "enemyPositionX" pour que la valeur soit la position actuelle de l'ennemi.</p>
+                <p> <b>positionY(int):</b> Position d'origine des projectiles sur l'axe des Y. La valeur entière peut être substituée par la chaîne de charactères "enemyPositionY" pour que la valeur soit la position actuelle de l'ennemi.</p>
+                <p><b>projectileCount(int):</b> Nombre de projectiles qui seront tirés en cercle</p>
+                <p><b>initialOffset(double):</b> Angle de décalage (en degrés) avec lequel les projectiles sont tirés</p>
+                <p><b>speed(double):</b> Scalaire de la vitesse des projectiles tirés</p>
+                <p><b>image(String):</b> Nom de l'image telle qu'elle est dans le fichier de textures, par exemple: VerySmallPurpleProjectile.png</p>
+                <p><b>id(int):</b> Identifiant interne donné aux projectiles instanciés par cette instruction. Ils peuvent par la suite être sélectionnés et modifiés selon cet identifiant.</p>
+            </article>
+            <article>
+                <h3>3.2 MakeSpiral</h3>
+                <h4>L'instruction MakeSpiral permet d'instancier des projectiles en spirale selon plusieurs paramètres. Les paramètres, dans l'ordre, sont:</h4>
+                <p><b>positionX(int):</b> Position d'origine des projectiles sur l'axe des X. La valeur entière peut être substituée par la chaîne de charactères "enemyPositionX" pour que la valeur soit la position actuelle de l'ennemi. </p>
+                <p><b>positionY(int):</b> Position d'origine des projectiles sur l'axe des Y. La valeur entière peut être substituée par la chaîne de charactères "enemyPositionY" pour que la valeur soit la position actuelle de l'ennemi.</p>
+                <p><b>projectileCount(int):</b> Nombre de projectiles qui seront tirés en cercle</p>
+                <p><b>projectilesToShoot(int):</b> Nombre de fois qu'un cercle de projectile sera tiré</p>
+                <p><b>speed(double):</b> Scalaire de la vitesse des projectiles tirés</p>
+                <p><b>firingSpeed(int):</b> Pour une valeur égale à n, un cercle de projectiles sera tiré à chaque n images rendues par le jeu (Le jeu effectue son rendu à 62.5 images par seconde).</p>
+                <p><b>rotationSpeed(double):</b> Angle (en degrés) par lequel seront décalés les projectiles tirés à chaque image rendue par le jeu (Le jeu effectue son rendu à 62.5 images par seconde).</p>
+                <p><b>initialOffset(double):</b> Angle de décalage (en degrés) avec lequel les projectiles sont tirés.</p>
+                <p><b>clockwise(boolean):</b> Détermine si les projectiles seront tirés dans le sens horaire ou antihoraire.</p>
+                <p><b>image(String):</b> Nom de l'image telle qu'elle est dans le fichier de textures, par exemple: VerySmallPurpleProjectile.png</p>
+                <p><b>id(int):</b> Identifiant interne donné aux projectiles instanciés par cette instruction. Ils peuvent par la suite être sélectionnés et modifiés selon cet identifiant.</p>
+            </article>
+        </section>
+        
+        <section>
+            <h2>4.0 Autres instructions</h2>
+            <article>
+                <h3>4.1 Wait</h3>
+                <h4>Suspend l'exécution de la prochaine instruction pendant un nombre spécifié de millisecondes. Cette instruction peut aussi retarder la fin de l'exécution dans les balises &lt;PARALLEL&gt;.</h4>
+                <p><b>timeToWait(int):</b> Nombre de millisecondes pendant lesquelles l'exécution de la prochaine instruction est suspendue.</p>
+            </article>
+            <article>
+                <h3>4.2 MoveEnemy</h3>
+                <h4>Déplace l'ennemi à un point donné dans la carte du jeu.</h4>
+                <p><b>positionX(double):</b> Position sur l'axe des X à laquelle sera déplacé l'ennemi.</p>
+                <p><b>positionY(double)</b>: Position sur l'axe des Y à laquelle sera déplacé l'ennemi.</p>
+                
+            </article>
+            <article>
+                <h3>4.3 SetTargetSpeed</h3>
+                <h4>Assigne aux projectiles portant un certain identifiant un scalaire de vitesse à atteindre ainsi qu'un scalaire d'accélération.</h4>
+                <p><b>targetSpeedScalar(double):</b> scalaire de vitesse à laquelle le projectile cessera d'accélérer ou de décélérer.</p>
+                <p><b>accelerationScalar(double):</b> scalaire d'accélération représentant le changement qui sera porté à la vitesse à chaque chaque image rendue par le jeu (Le jeu effectue son rendu à 62.5 images par seconde).</p>
+                <p><b>id(int):</b> identifiant interne des projectile qui seront affectés par cette instruction.</p>
+                
+            </article>
+            <article>
+                <h3>4.4 SetRevolutionSpeed</h3>
+                <h4>Assigne aux projectiles portant un certain identifiant une vitesse de révolution ainsi qu'un point central de révolution.</h4>
+                <p><b>revolutionCenterX(double):</b> position sur l'axe des X représentant le centre de révolution des projectiles affectés. La valeur peut être substituée par la chaîne de charactères "enemyPositionX" pour que la valeur soit la position actuelle de l'ennemi.</p>
+                <p><b>revolutionCenterY(double):</b> position sur l'axe des Y représentant le centre de révolution des projectiles affectés. La valeur entière peut être substituée par la chaîne de charactères "enemyPositionY" pour que la valeur soit la position actuelle de l'ennemi.</p>
+                <p><b>revolutionSpeed(double):</b> scalaire de la vitesse de révolution des projectiles affectés.</p>
+                <p><b>id(int):</b> identifiant interne des projectile qui seront affectés par cette instruction.</p>
+            </article>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil de l'utilisateur</title>
+    <link rel="stylesheet" href="userSettings.css">
+</head>
+<body>
+    <div class="header">
+        <nav class="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="levels.html">Niveaux</a>
+            <a href="rankings.html">Classements</a>
+            <a href="threads.html">Forum</a>
+            <a href="help.html">Aide</a>
+        </nav>
+        <div class="menu-profil">
+            <img src="../img/joobi.png" alt="Photo de profil" class="icone-profil">
+            <ul class="menu-options">
+                <a href="profile.html">Mon profil</a>
+                <a href="userSettings.html">Paramètres</a>
+                <a href="logout.html">Déconnexion</a>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="contenu">
+        <h2>Paramètres</h2>
+
+        <form id="bioForm">
+            <label for="bio">Biographie:</label><br>
+            <textarea id="bio" name="bio">Salut je suis UserTest882 j'aime tout le monde yes</textarea><br>
+            <button type="submit" class="save-button">Sauvegarder Bio</button>
+        </form>
+
+        <form id="profilePictureForm">
+            <label for="profilePicture">Photo de profil:</label><br>
+            <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><br>
+            <button type="submit" class="save-button">Sauvegarder Photo</button>
+        </form>
+
+        <div id="messageContainer" style="color: red; display: none;"></div>
+
+        <a href="sendPassword.html" class="password-change-link">Changer le mot de passe ici</a>
+    </div>
+    <script src="userSettings.js"></script>
+</body>
+</html>

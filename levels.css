@@ -1,0 +1,232 @@
+body {
+    background: rgb(39, 58, 56);
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #407262;
+}
+
+.menu-profil {
+    position: relative; 
+    padding-right:150px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    padding-left:150px;
+    flex-grow: 1;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #000000b3; 
+    padding: 10px;
+    margin: 0 5px; 
+}
+
+.navigation a:hover {
+    background-color: #325b47; 
+    color:rgb(189, 247, 197);
+    border-radius: 5px; 
+}
+
+.icone-profil {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.menu-options {
+    display: none;
+    position: absolute;
+    right: 180px;
+    top: 20px; 
+    background-color: #1c2521;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 9px;
+}
+
+.menu-options a {
+    color: rgb(247, 247, 247);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.menu-options a:hover {
+    background-color: #a2a2a21f;
+}
+
+.menu-profil:hover .menu-options {
+    display: block;
+}
+
+
+#loginButton {
+    background-color: #3c9c6f;
+    color: rgb(252, 255, 251);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+}
+
+#loginButton:hover {
+    background-color: #246856; 
+}
+
+.upload-level-form {
+    background-color: #2c3e3b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.upload-level-form label {
+    color: #95c6a7; 
+    display: block;
+    margin-bottom: 10px;
+}
+
+.upload-level-form input[type="text"],
+.upload-level-form select {
+    padding: 10px; 
+    border: 1px solid #325b47;
+    border-radius: 5px; 
+    background-color: #2c3e3b; 
+    color: #c7d9c8;
+    width: 80%; 
+    margin-bottom: 20px; 
+}
+
+.upload-button {
+    background-color: #407262;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #325b47;
+}
+
+
+
+.contenu {
+    padding: 20px;
+    background-color: #507f70;
+    border-radius: 60px;
+    margin: 20px auto;
+    width: 80%;
+    color: #FFFFFF;
+    background-color:rgba(0, 0, 0, 0.205);
+    padding:1%;
+    border-radius:10px;
+    box-shadow: 1px 1px 5px 5px rgba(0, 0, 0, 0.163);
+}
+
+.contenu h2 {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.145);
+    padding: 10px;
+    color: #95c6a7;
+}
+
+.level-item {
+    background-color: #2c3e3b;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.level-header {
+    display: flex;
+    align-items: center;
+}
+
+.level-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.level-title {
+    margin: 0;
+    color: #95c6a7;
+    flex-grow: 1;
+}
+
+.level-difficulty {
+    background: #86a58c;
+    color: #1f2e2d;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+}
+
+.level-action-button {
+    background: #407262;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.level-action-button:hover {
+    background: #325b47;
+}
+
+.level-description {
+    color: #c7d9c8;
+    font-size: 0.9em;
+}
+
+.level-info-button, .upload-button {
+    padding: 10px 15px;
+    background-color: #407262; 
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.level-info-button:hover, .upload-button:hover {
+    background-color: #325b47; 
+}
+
+.level-action-button {
+    padding: 8px 12px; 
+    background-color: #407262; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
+}
+
+.level-action-button:hover {
+    background-color: #325b47; 
+}
